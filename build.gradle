@@ -1,0 +1,41 @@
+buildscript{
+    repositories{
+        mavenCentral()
+    }
+    dependencies{
+//        classpath()
+    }
+
+}
+plugins {
+    id 'org.springframework.boot' version '1.5.6.RELEASE'
+}
+
+group 'kpi'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+jar {
+    baseName = 'kpi-platform'
+    version =  '0.1.0-SNAPSHOT'
+}
+
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.6.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:1.5.6.RELEASE")
+    compile("org.springframework.boot:spring-boot-devtools")
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.38'
+    testCompile("org.springframework.boot:spring-boot-starter-test:1.5.6.RELEASE")
+}
