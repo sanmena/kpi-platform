@@ -1,15 +1,19 @@
-package platform.controllers;
+package platform.web.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HomeController {
 
-    @RequestMapping("/")
+    @GetMapping("/")
     @ResponseBody
     public String home() {
         return "hello world!";
     }
+
+
+
+
+
 }
